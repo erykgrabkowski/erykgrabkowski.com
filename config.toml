@@ -11,28 +11,33 @@ disableKinds = ["taxonomy", "term"]
 [author]
    name = "Eryk Grabkowski"
    headline = "Hello! I'm Eryk Grabkowski, a recent IT graduate living in Ireland. I work as a Network Operations Centre Technician"
-  # image = "img/author.jpg"  # path relative to static directory
+   image = "img/author.jpg"  # path relative to static directory
 
   links = [
     { email = "mailto:eryk@grabkowski.net" },
+    { discord = "https://discord.gg/7U4Z7jeTsK" },
+    { spotify = "https://open.spotify.com/user/39gxyrhbvksf2wdcth8t6tx28?si=4a89d3bdf08a41ca" }
+    { x = "https://x.com/erykgrabkowski" },
+    { youtube = "https://youtube.com/@erykgrabkowski" },
+    { linkedin = "https://linkedin.com/in/erykgrabkowski" },
+    { instagram = "https://instagram.com/erykgrabkowski" },
+    { github = "https://github.com/erykgrabkowski" },
+    { tiktok = "https://tiktok.com/@erykgrabkowski" },
+
     # { link = "https://link-to-some-website.com/" },
     # { amazon = "https://www.amazon.com/hz/wishlist/ls/wishlist-id" },
     # { apple = "https://www.apple.com" },
     # { codepen = "https://codepen.io/username" },
     # { dev = "https://dev.to/username" },
-    { discord = "https://discord.gg/7U4Z7jeTsK" },
     # { dribbble = "https://dribbble.com/username" },
     # { facebook = "https://facebook.com/username" },
     # { flickr = "https://www.flickr.com/photos/username/" },
     # { foursquare = "https://foursquare.com/username" },
-    { github = "https://github.com/erykgrabkowski" },
     # { gitlab = "https://gitlab.com/username" },
     # { google = "https://www.google.com/" },
-    { instagram = "https://instagram.com/erykgrabkowski" },
     # { keybase = "https://keybase.io/username" },
     # { kickstarter = "https://www.kickstarter.com/profile/username" },
     # { lastfm = "https://lastfm.com/user/username" },
-    { linkedin = "https://linkedin.com/in/erykgrabkowski" },
     # { mastodon = "https://mastodon.instance/@username" },
     # { medium = "https://medium.com/username" },
     # { microsoft = "https://www.microsoft.com/" },
@@ -46,12 +51,10 @@ disableKinds = ["taxonomy", "term"]
     # { stack-overflow = "https://stackoverflow.com/users/userid/username" },
     # { steam = "https://steamcommunity.com/profiles/userid" },
     # { telegram = "https://t.me/username" },
-    { tiktok = "https://tiktok.com/@erykgrabkowski" },
     # { tumblr = "https://username.tumblr.com" },
     # { twitch = "https://twitch.tv/username" },
     # { twitter = "https://twitter.com/username" },
     # { whatsapp = "https://wa.me/phone-number" },
-    { youtube = "https://youtube.com/@erykgrabkowski" },
   ]
 
 [module]
