@@ -14,7 +14,6 @@ disableKinds = ["taxonomy", "term"]
    # image = "img/author.jpg"  # path relative to static directory
 
   links = [
-    { email = "mailto:eryk@grabkowski.net" },
     { linkedin = "https://linkedin.com/in/erykgrabkowski" },
     { github = "https://github.com/erykgrabkowski" },
     { youtube = "https://youtube.com/@erykgrabkowski" },
@@ -22,7 +21,7 @@ disableKinds = ["taxonomy", "term"]
     { discord = "https://discord.gg/7U4Z7jeTsK" },
     { instagram = "https://instagram.com/erykgrabkowski" },
     { tiktok = "https://tiktok.com/@erykgrabkowski" },
-    { email1 = { href = "mailto:eryk@grabkowski.net", text = "Email Address" } },
+    { email1 = { href = "mailto:eryk@grabkowski.net", text = "@ Email Address" } },
     # { link = "https://link-to-some-website.com/" },
     # { amazon = "https://www.amazon.com/hz/wishlist/ls/wishlist-id" },
     # { apple = "https://www.apple.com" },
