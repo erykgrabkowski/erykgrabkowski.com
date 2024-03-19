@@ -16,14 +16,13 @@ disableKinds = ["taxonomy", "term"]
   links = [
     { email = "mailto:eryk@grabkowski.net" },
     { discord = "https://discord.gg/7U4Z7jeTsK" },
-    { spotify = "https://open.spotify.com/user/39gxyrhbvksf2wdcth8t6tx28?si=4a89d3bdf08a41ca" }
+    { spotify = "https://open.spotify.com/user/39gxyrhbvksf2wdcth8t6tx28?si=4a89d3bdf08a41ca" },
     { x = "https://x.com/erykgrabkowski" },
     { youtube = "https://youtube.com/@erykgrabkowski" },
     { linkedin = "https://linkedin.com/in/erykgrabkowski" },
     { instagram = "https://instagram.com/erykgrabkowski" },
     { github = "https://github.com/erykgrabkowski" },
     { tiktok = "https://tiktok.com/@erykgrabkowski" },
-
     # { link = "https://link-to-some-website.com/" },
     # { amazon = "https://www.amazon.com/hz/wishlist/ls/wishlist-id" },
     # { apple = "https://www.apple.com" },
