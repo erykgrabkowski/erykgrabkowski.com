@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Will you be my valentine? 💌</title>
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: #ff6b81; /* slightly more pink */
+        font-family: 'Segoe UI', sans-serif;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        color: white;
+    }
+
+    .card {
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(10px);
+        padding: 50px 60px;
+        border-radius: 20px;
+        text-align: center;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        animation: fadeIn 1.5s ease-in-out;
+        position: relative;
+    }
+
+    h1 {
+        font-size: 2.5em;
+        margin-bottom: 20px;
+    }
+
+    .buttons {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        position: relative;
+        margin-top: 20px; /* extra space from teddy if present */
+    }
+
+    .teddy {
+        margin: 20px auto 20px; /* add bottom margin for spacing from buttons */
+        width: 150px;
+    }
+
+    .teddy img {
+        width: 100%;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    button {
+        padding: 14px 32px;
+        font-size: 1.1em;
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+        transition: 0.3s ease;
+        font-weight: bold;
+    }
+
+    #yesBtn {
+        background: white;
+        color: #e63946;
+    }
+
+    #yesBtn:hover {
+        transform: scale(1.1);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    #noBtn {
+        background: #ffccd5;
+        color: #e63946;
+        position: relative;
+        transition: transform 0.4s ease-in-out; /* slightly slower for catchable movement */
+    }
+
+    #message {
+        margin-top: 25px;
+        font-size: 1.4em;
+        display: none;
+        animation: pop 0.6s ease forwards;
+    }
+
+    @keyframes fadeIn {
+        from {opacity: 0; transform: translateY(20px);}
+        to {opacity: 1; transform: translateY(0);}
+    }
+
+    @keyframes pop {
+        0% {transform: scale(0.5); opacity: 0;}
+        100% {transform: scale(1); opacity: 1;}
+    }
+
+    /* mobile-friendly adjustments */
+    @media (max-width: 600px) {
+        body {
+            padding: 20px;
+            align-items: flex-start;
+            height: auto;
+        }
+
+        .card {
+            width: 100%;
+            padding: 30px;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            font-size: 2em;
+        }
+
+        .buttons {
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .buttons button {
+            width: 100%;
+        }
+
+        .teddy {
+            width: 120px;
+            margin-bottom: 20px;
+        }
+    }
+</style>
+</head>
+
+<body>
+
+<div class="card">
+    <h1>Hi Chen, will you be my valentine? 💖</h1>
+
+    <!-- teddy bear image placeholder -->
+    <div class="teddy">
+        <img src="teddy.png" alt="Teddy Bear" />
+    </div>
+
+    <div class="buttons">
+        <button id="yesBtn" onclick="sayYes()">Yes 💘</button>
+        <button id="noBtn" onmouseover="moveNo()" onclick="sayNo()">No 💔</button>
+    </div>
+
+    <div id="message">Great ❤️ dinner in Dublin soon?</div>
+</div>
+
+<script>
+function sayYes() {
+    const msg = document.getElementById("message");
+    msg.textContent = "Great ❤️ Dinner in Dublin soon?";
+    msg.style.display = "block";
+}
+
+let noCanRun = true; // flag to allow movement
+
+function moveNo() {
+    if (!noCanRun) return; // once clicked, stop running
+
+    const noBtn = document.getElementById("noBtn");
+    const rect = noBtn.getBoundingClientRect();
+
+    // bigger jumps with constraint to keep button visible on screen
+    const maxX = Math.min(280, window.innerWidth / 3);
+    const maxY = Math.min(160, window.innerHeight / 3);
+
+    const randomX = (Math.random() * maxX * 2) - maxX;
+    const randomY = (Math.random() * maxY * 2) - maxY;
+
+    noBtn.style.transform = `translate(${randomX}px, ${randomY}px)`;
+}
+
+function sayNo() {
+    // show a light-hearted joke in the page when they click No
+    const msg = document.getElementById("message");
+    msg.textContent = "Oh no! You clicked 'No'? I guess I'll just have to settle for some chocolate 😂";
+    msg.style.display = "block";
+    noCanRun = false; // stop the button from dodging further
+}
+</script>
+
+</body>
+</html>
